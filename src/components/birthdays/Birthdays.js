@@ -5,7 +5,7 @@ import './index.css'
 const Birthdays = () => {
   const [people, setPeople] = useState(data)
   return (
-    <>
+    <main>
       <section className="container">
         <h3> {people.length} birthday today</h3>
         {people.map((p) => {
@@ -19,10 +19,12 @@ const Birthdays = () => {
             </article>
           )
         })}
-        <button onClick={() => setPeople([])}>Clear</button>
+        <button onClick={() => setPeople([])} className="random-btn">
+          Clear
+        </button>
       </section>
-    </>
+    </main>
   )
 }
 
-export default <Birthdays></Birthdays>
+export default Birthdays
