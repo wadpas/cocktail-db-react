@@ -3,7 +3,7 @@ import { FaAngleDoubleRight } from 'react-icons/fa'
 import './index.css'
 const url = 'https://course-api.com/react-tabs-project'
 
-function CV() {
+function Experience() {
   const [loading, setLoading] = useState(true)
   const [jobs, setJobs] = useState([])
   const [value, setValue] = useState(0)
@@ -22,11 +22,11 @@ function CV() {
   if (loading) {
     return (
       <section className="section loading">
-        <h1>loading...</h1>
+        <h2>loading...</h2>
       </section>
     )
   }
-  const { company, duties, dates, title, order, id } = jobs[value]
+  const { company, duties, dates, title } = jobs[value]
   return (
     <section className="section">
       <div className="title">
@@ -34,7 +34,7 @@ function CV() {
         <div className="underline"></div>
       </div>
       <div className="jobs-center">
-        <div className="btn-container">
+        <div>
           {jobs.map((job, index) => {
             return (
               <button
@@ -64,4 +64,4 @@ function CV() {
   )
 }
 
-export default CV
+export default Experience

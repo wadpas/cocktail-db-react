@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Menu from './Menu'
+import Dish from './Dish'
 import Categories from './Categories'
 import items from './data'
 import './index.css'
@@ -20,11 +20,12 @@ function Caffe() {
   }
 
   return (
-    <section className="menu section">
+    <section className="section">
       <div className="title">
         <h2>our menu</h2>
+        <div className="underline"></div>
         <Categories categories={categories} filterItems={filterItems} />
-        <Menu items={menuItems} />
+        <Dish items={menuItems} />
       </div>
     </section>
   )

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Tour from './Tour'
-import Loading from './Loading'
 import './index.css'
 const url = 'https://course-api.com/react-tours-project'
 
@@ -32,7 +31,9 @@ const Tours = () => {
   }, [])
 
   return loading ? (
-    <Loading />
+    <section className="section loading">
+      <h2>loading...</h2>
+    </section>
   ) : !tours.length ? (
     <div className="title">
       <h2>No tourse</h2>
@@ -41,16 +42,15 @@ const Tours = () => {
       </button>
     </div>
   ) : (
-    <main>
-      <section>
-        <div className="title">
-          <h2>Tours</h2>
-        </div>
-        {tours.map((tour) => (
-          <Tour {...tour} removeTour={removeTour} key={tour.id} />
-        ))}
-      </section>
-    </main>
+    <section className="section">
+      <div className="title">
+        <h2>Tours</h2>
+        <div className="underline"></div>
+      </div>
+      {tours.map((tour) => (
+        <Tour {...tour} removeTour={removeTour} key={tour.id} />
+      ))}
+    </section>
   )
 }
 export default Tours

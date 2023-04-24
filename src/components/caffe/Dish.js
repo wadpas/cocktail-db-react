@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Menu = ({ items }) => {
+const Dish = ({ items }) => {
   return (
     <div className="section-center">
       {items.map((menuItem) => {
@@ -13,7 +13,7 @@ const Menu = ({ items }) => {
                 <h4>{title}</h4>
                 <h4 className="price">${price}</h4>
               </header>
-              <div className="item-text">{desc}</div>
+              <p className="item-text">{desc}</p>
             </div>
           </article>
         )
@@ -22,4 +22,4 @@ const Menu = ({ items }) => {
   )
 }
 
-export default Menu
+export default Dish

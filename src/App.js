@@ -1,36 +1,32 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import CV from './components/cv/CV'
+import Experience from './components/experience/Experience'
 import Tours from './components/tours/Tours'
-import Review from './components/review/Review'
 import Accordion from './components/accordion/Accordion'
 import Caffe from './components/caffe/Caffe'
+// import Team from './components/team/Team'
 
 function App() {
+  const buttons = ['caffe', 'tours', 'experience', 'accordion']
+
   return (
     <BrowserRouter>
       <div className="title">
-        <Link className="random-btn" to="/cv">
-          CV
-        </Link>
-        <Link className="random-btn" to="/tours">
-          Tours
-        </Link>
-        <Link className="random-btn" to="/review">
-          Review
-        </Link>
-        <Link className="random-btn" to="/accordion">
-          Accordion
-        </Link>
-        <Link className="random-btn" to="/">
-          Caffe
-        </Link>
+        {buttons.map((button, index) => {
+          return (
+            <Link className="filter-btn" to={`/${button}`} key={index}>
+              {button.toUpperCase()}
+            </Link>
+          )
+        })}
       </div>
+
       <Routes>
-        <Route path="/cv" element={<CV />} />
+        <Route path="/experience" element={<Experience />} />
         <Route path="/tours" element={<Tours />} />
-        <Route path="/review" element={<Review />} />
         <Route path="/accordion" element={<Accordion />} />
+        <Route path="/caffe" element={<Caffe />} />
         <Route path="/" element={<Caffe />} />
+        {/* <Route path="/team" element={<Team />} /> */}
       </Routes>
     </BrowserRouter>
   )

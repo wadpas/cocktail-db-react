@@ -212,6 +212,7 @@ Menu
 .item-text {
   margin-bottom: 0;
   padding-top: 1rem;
+  text-align: justify;
 }
 
 @media screen and (min-width: 768px) {

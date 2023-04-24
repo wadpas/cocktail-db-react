@@ -2,7 +2,7 @@ import React from 'react'
 
 const Categories = ({ categories, filterItems }) => {
   return (
-    <div className="btn-container">
+    <div className="title">
       {categories.map((category, index) => (
         <button
           className="filter-btn"
