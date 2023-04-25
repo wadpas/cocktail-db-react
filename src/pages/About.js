@@ -1,13 +1,11 @@
-import { Link } from 'react-router-dom'
+import React from 'react'
 
 const About = () => {
   return (
-    <section className="section">
-      <h2>About</h2>
-      <Link to="/" className="btn">
-        Home
-      </Link>
-    </section>
+    <div>
+      <h2>about page</h2>
+    </div>
   )
 }
+
 export default About

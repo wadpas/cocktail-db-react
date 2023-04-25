@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Error = () => {
+const Cocktail = () => {
   return (
     <div>
-      <h2>error page</h2>
+      <h2>cocktail component</h2>
     </div>
   )
 }
 
-export default Error
+export default Cocktail

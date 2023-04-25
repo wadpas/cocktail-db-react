@@ -1,12 +1,12 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
+import logo from '../logo.svg'
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/products">Products</Link>
-    </nav>
+    <div>
+      <h2>navbar component</h2>
+    </div>
   )
 }
 
