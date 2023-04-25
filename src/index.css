@@ -231,7 +231,7 @@ Cocktail
 .cocktail {
   background: var(--mainWhite);
   margin-bottom: 2rem;
-  box-shadow: var(--lightShadow);
+  box-shadow: var(--primaryLightColor);
   transition: var(--mainTransition);
   display: grid;
   grid-template-rows: auto 1fr;
