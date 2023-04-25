@@ -4,9 +4,9 @@ Variables
 ======
 */
 :root {
-  --primaryLightColor: #c6e47b;
-  --primaryColor: #63aa30;
-  --primaryDarkColor: #9b2403;
+  --primaryLightColor: #d4e6a5;
+  --primaryColor: #476a2e;
+  --primaryDarkColor: #c02c03;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBackground: #f1f5f8;
@@ -17,8 +17,8 @@ Variables
   --mainRed: #bd0303;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 0.3rem;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.05);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.05);
   --mainBorderRadius: 0.25rem;
   --smallWidth: 85vw;
   --maxWidth: 40rem;
@@ -36,7 +36,7 @@ Global Styles
 }
 
 body {
-  font-family: 'Chivo Mono', monospace;
+  font-family: 'Roboto Slab', serif;
   color: var(--mainBlack);
   background: var(--mainBackground);
   line-height: 1.4;
@@ -135,7 +135,8 @@ Navbar
   height: 5rem;
   display: flex;
   align-items: center;
-  box-shadow: var(--primaryLightColor);
+  border-bottom: 2px solid var(--primaryColor);
+  box-shadow: var(--lightShadow);
 }
 .nav-center {
   display: flex;
@@ -162,6 +163,9 @@ Navbar
 }
 .nav-links a:hover {
   color: var(--primaryColor);
+}
+.logo {
+  width: 12rem;
 }
 /* 
 ====== 
@@ -231,7 +235,7 @@ Cocktail
 .cocktail {
   background: var(--mainWhite);
   margin-bottom: 2rem;
-  box-shadow: var(--primaryLightColor);
+  box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
   display: grid;
   grid-template-rows: auto 1fr;
